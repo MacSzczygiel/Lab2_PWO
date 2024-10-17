@@ -1,9 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Witamy studencie");
-        Student st = new Student("Adam","Piotrowicki",20);
+        List<Student> sts = new ArrayList<>();
+        for (int i = 0; i < 10 ; i++) {
 
-
-        System.out.println("Student: " + st);
+           sts.add(new Student("Student name"+i,"Surname "+i,i));
+        }
+        System.out.println("Lista studentów");
+        System.out.println(sts);
     }
 }
